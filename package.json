@@ -1,0 +1,22 @@
+{
+  "name": "order-summary-component",
+  "version": "1.0.0",
+  "description": "Order summary component",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristinaRadosavljevic/order-summary-component.git"
+  },
+  "author": "Kristina Radosavljevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristinaRadosavljevic/order-summary-component/issues"
+  },
+  "homepage": "https://github.com/KristinaRadosavljevic/order-summary-component#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
