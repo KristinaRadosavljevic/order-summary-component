@@ -116,6 +116,8 @@ section {
 @media (max-width: 450px) {
   html {
     font-size: 14px; }
+  body {
+    background-image: url("../images/pattern-background-mobile.svg"); }
   section {
     margin: 1.5rem; }
     section .plan {
