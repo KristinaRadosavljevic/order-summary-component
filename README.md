@@ -11,8 +11,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -29,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [See the code on GitHub]()
-- Live Site URL: [View live site]()
+- Solution URL: [See the code on GitHub](https://github.com/KristinaRadosavljevic/order-summary-component)
+- Live Site URL: [View live site](https://order-summary-component-five-black.vercel.app/)
 
 ## My process
 
@@ -38,12 +36,12 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS/Sass
+- Flexbox
+- CSS grid
 
 ### What I learned
 
-### Continued development
-
-### Useful resources
+In this challenge, I got to practice using CSS grid a little bit, and I also implemented the `prefers-reduced-motion` media query for the first time, which will hopefully turn into a habit.
 
 ## Author
 
