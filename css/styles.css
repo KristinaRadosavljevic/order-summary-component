@@ -112,3 +112,11 @@ section {
   *::before,
   *::after {
     transition-duration: 0.01ms !important; } }
+
+@media (max-width: 450px) {
+  html {
+    font-size: 14px; }
+  section {
+    margin: 1.5rem; }
+    section .plan {
+      padding: 1rem; } }
