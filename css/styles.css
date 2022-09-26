@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 1.5rem;
+  background-color: #e0e8ff;
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+main {
+  background-color: white;
+  max-width: 28rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 1.5rem rgba(114, 128, 167, 0.2); }
+  main > img {
+    width: 100%; }
+
+section {
+  margin: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; }
+  section h1 {
+    line-height: 1;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #1f2f56; }
+  section .description {
+    color: #7280a7; }
+  section .plan {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "icon title link" "icon price link";
+    align-items: center;
+    column-gap: 1.2rem;
+    text-align: left;
+    background-color: #f5f7ff;
+    border-radius: 0.5rem;
+    padding: 1.5rem; }
+    section .plan__icon {
+      grid-area: icon; }
+    section .plan__title {
+      grid-area: title;
+      font-size: 1rem;
+      font-weight: 900; }
+    section .plan__price {
+      grid-area: price;
+      color: #7280a7; }
+    section .plan__link {
+      grid-area: link;
+      color: #3829e0;
+      font-weight: 700;
+      transition: all 0.3s; }
+      section .plan__link:hover {
+        color: #8a73fc;
+        text-decoration: none; }
+  section .main-btn {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: #3829e0;
+    box-shadow: 0 1rem 1rem rgba(114, 128, 167, 0.2);
+    padding: 0.7rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    position: relative; }
+    section .main-btn span {
+      position: relative;
+      z-index: 1; }
+    section .main-btn::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: inherit;
+      background-color: #8a73fc;
+      transition: all 0.5s; }
+    section .main-btn:hover::before {
+      width: 100%; }
+  section .cancel-btn {
+    width: fit-content;
+    align-self: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #7280a7;
+    text-decoration: none;
+    transition: all 0.3s; }
+    section .cancel-btn:hover {
+      color: #1f2f56; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important; } }
+
+@media (max-width: 450px) {
+  html {
+    font-size: 14px; }
+  section {
+    margin: 1.5rem; }
+    section .plan {
+      padding: 1rem; } }
