@@ -131,7 +131,7 @@ section {
       left: 0;
       border-radius: inherit;
       background-color: $purple;
-      transition: all 0.3s;
+      transition: all 0.5s;
     }
 
     &:hover::before {
@@ -140,6 +140,8 @@ section {
   }
 
   .cancel-btn {
+    width: fit-content;
+    align-self: center;
     font-size: 0.9rem;
     font-weight: 700;
     color: $desaturated-blue;
@@ -149,5 +151,14 @@ section {
     &:hover {
       color: $dark-blue;
     }
+  }
+}
+
+// Removing transitions
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

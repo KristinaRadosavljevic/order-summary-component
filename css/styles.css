@@ -93,10 +93,12 @@ section {
       left: 0;
       border-radius: inherit;
       background-color: #8a73fc;
-      transition: all 0.3s; }
+      transition: all 0.5s; }
     section .main-btn:hover::before {
       width: 100%; }
   section .cancel-btn {
+    width: fit-content;
+    align-self: center;
     font-size: 0.9rem;
     font-weight: 700;
     color: #7280a7;
@@ -104,3 +106,9 @@ section {
     transition: all 0.3s; }
     section .cancel-btn:hover {
       color: #1f2f56; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important; } }
