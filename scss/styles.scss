@@ -7,6 +7,7 @@ $very-pale-blue: hsl(225, 100%, 98%);
 $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
 $box-shadow: hsla(224, 23%, 55%, 0.2);
+$purple: hsl(250, 96%, 72%);
 
 // Global resets
 * {
@@ -33,7 +34,7 @@ body {
 
 main {
   background-color: hsl(0, 0%, 100%);
-  max-width: 25rem;
+  max-width: 28rem;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 2rem 1.5rem $box-shadow;
@@ -59,5 +60,94 @@ section {
 
   .description {
     color: $desaturated-blue;
+  }
+
+  .plan {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "icon title link"
+      "icon price link";
+    align-items: center;
+    column-gap: 1.2rem;
+    text-align: left;
+    background-color: $very-pale-blue;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+
+    &__icon {
+      grid-area: icon;
+    }
+
+    &__title {
+      grid-area: title;
+      font-size: 1rem;
+      font-weight: 900;
+    }
+
+    &__price {
+      grid-area: price;
+      color: $desaturated-blue;
+    }
+
+    &__link {
+      grid-area: link;
+      color: $bright-blue;
+      font-weight: 700;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $purple;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .main-btn {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: $bright-blue;
+    box-shadow: 0 1rem 1rem $box-shadow;
+    padding: 0.7rem;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    position: relative;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: inherit;
+      background-color: $purple;
+      transition: all 0.3s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  .cancel-btn {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $desaturated-blue;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $dark-blue;
+    }
   }
 }
